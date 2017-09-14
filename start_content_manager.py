@@ -1,9 +1,9 @@
 import subprocess
-import os
+from sys import argv
 
 CONTAINER_NAME = 'danny-site'
 PORT_MAPPING = '127.0.0.1:8096:8000'
-VOLUME_MAPPING = '{}/src/img:/images'.format(os.getcwd())
+VOLUME_MAPPING = '{}/src/img:/images'.format(argv[1])
 IMAGE = 'personal_website'
 
 def check_for_container(name):
